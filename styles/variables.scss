@@ -1,0 +1,82 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the font-face declarations and SCSS variables for my Final
+            Project (hangman) website.
+*/
+
+
+/* ----------------------------------------------------------------------------------------- */
+/* @font-face declarations */
+/* ----------------------------------------------------------------------------------------- */
+
+/* Logo/Branding */
+@font-face {
+    font-family: 'Cavolini';
+    src: url('../fonts/Cavolini.woff2') format('woff2'),
+        url('../fonts/Cavolini.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Headings */
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Heavy.woff2') format('woff2'),
+        url('../fonts/FiraSans-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Nav and Form Text */
+@font-face {
+    font-family: 'GothamNarrow';
+    src: url('../fonts/GothamNarrow-Book.woff2') format('woff2'),
+        url('../fonts/GothamNarrow-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Main Text */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Book.woff2') format('woff2'),
+        url('../fonts/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* SASS Variables */
+/* ----------------------------------------------------------------------------------------- */
+
+/* Color Variables */
+$mediumnavy: #163a5f;
+$metal: #87919e;
+$silver: #b0b7bf;
+$gold: #d8c68d;
+$offwhite: #f0f2ef;
+$burgundy: #5a2328;
+$bad-color:#d10707;    /* red means there is a problem */ 
+$good-color: #6bbf59;  /* green means the result is good/found */
+
+/* Width Variables */
+$wrapper-width: 1024px;
+
+/* Font-Stacks    */
+$font-logo: "Cavolini", "sans-serif";
+$font-headings: "Fira Sans", "sans-serif";
+$font-body: "Gotham", "sans-serif";
+$font-nav: "GothamNarrow", "sans-serif";
+$font-form: "GothamNarrow", "sans-serif";
+
+/* Global Scale Factors for Spacing and Text-Related Items */
+:root {
+    --scale-factor: 1.0;
+    --scale-text: 1.0;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Author: Leanne Douglas
+    Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+    This is a website that demonstrates various JavaScript and jQuery techniques
+    to display and run a game of Hangman.
+    -->
+
+<head>	
+    <title>Final Project | COMP 2132</title>
+
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+
+    <meta charset="utf-8" />
+    
+    <!-- Ensure design is responsive by using the ideal viewport. -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" media="all" />
+
+    <!-- Load the jQuery library and other script files. -->
+    <script src="scripts/jquery-3.4.1.min.js" defer></script>
+    <script src="scripts/menu.js" defer="defer"></script>
+    <script src="scripts/WordData.js" defer="defer"></script>
+    <script src="scripts/setup.js" defer="defer"></script>
+    <script src="scripts/hangman.js" defer="defer"></script>
+</head>
+
+<body>
+<div id="wrapper_body">
+    <noscript>
+        <div class="warning warning-no-script"> 
+            <h2>Javascript Is Disabled!</h2>
+            <p>This page requires JavaScript to run.</p>
+            <p>Please <a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/">enable Javascript</a> in your browser and then refresh this page.</p>				
+        </div>
+    </noscript>
+    
+    <header>
+        <div id="wrapper_header">
+            <div id="wrapper_brand">
+                <a id="logo" href="#"><img src="images/douglas_designs_logo.png" alt="Douglas Designs"></a>
+                <a class="small_menu" href="#">☰</a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nothing</a></li>
+                    <li><a href="#">Nowhere</a></li>
+                    <li><a href="#">Nil</a></li>
+                    <li><a href="#">Nada</a></li>
+                    <li><a href="#">Nope</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="wrapper_subhead">
+            <div id="wrapper_h1">
+                <h1>COMP 2132: Final Project</h1>
+                <p class="h1_subtext">by Leanne Douglas</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="wrapper_main">
+            <section>
+                <div id="game_title" class="gold_bg">
+                    <h2>Lego 'Hangman'</h2>
+                </div>
+
+                <div class="input_area white_bg">
+                    <div id="image_area">
+                        <img src="images/hangman-0.jpg" alt="Hangman background">
+                    </div>
+
+                    <div id="game_area">
+                        <div class="centered">
+                            <ol id="word_letters"><li class="no_borders"></li></ol>
+                        </div> <!-- end of div '.centered' -->
+                        
+                        <div class="centered">
+                            <p id="word_hint"></p>
+                        </div> <!-- end of div '.centered' -->
+
+
+                        <div id="game_stats">
+                            <p id="difficulty"></p>
+                            <p id="guesses"></p>
+                        </div> <!-- end of div '#game_stats' -->
+                    </div> <!-- end of div '#game_area' -->
+
+                    <div id="input_letters" class="centered">
+                        <ol id="btn_letters">
+                            <li><button id="btn_a" class="btn_letter btn_enabled">A</button></li>
+                            <li><button id="btn_b" class="btn_letter btn_enabled">B</button></li>
+                            <li><button id="btn_c" class="btn_letter btn_enabled">C</button></li>
+                            <li><button id="btn_d" class="btn_letter btn_enabled">D</button></li>
+                            <li><button id="btn_e" class="btn_letter btn_enabled">E</button></li>
+                            <li><button id="btn_f" class="btn_letter btn_enabled">F</button></li>
+                            <li><button id="btn_g" class="btn_letter btn_enabled">G</button></li>
+                            <li><button id="btn_h" class="btn_letter btn_enabled">H</button></li>
+                            <li><button id="btn_i" class="btn_letter btn_enabled">I</button></li>
+                            <li><button id="btn_j" class="btn_letter btn_enabled">J</button></li>
+                            <li><button id="btn_k" class="btn_letter btn_enabled">K</button></li>
+                            <li><button id="btn_l" class="btn_letter btn_enabled">L</button></li>
+                            <li><button id="btn_m" class="btn_letter btn_enabled">M</button></li>
+                            <li><button id="btn_n" class="btn_letter btn_enabled">N</button></li>
+                            <li><button id="btn_o" class="btn_letter btn_enabled">O</button></li>
+                            <li><button id="btn_p" class="btn_letter btn_enabled">P</button></li>
+                            <li><button id="btn_q" class="btn_letter btn_enabled">Q</button></li>
+                            <li><button id="btn_r" class="btn_letter btn_enabled">R</button></li>
+                            <li><button id="btn_s" class="btn_letter btn_enabled">S</button></li>
+                            <li><button id="btn_t" class="btn_letter btn_enabled">T</button></li>
+                            <li><button id="btn_u" class="btn_letter btn_enabled">U</button></li>
+                            <li><button id="btn_v" class="btn_letter btn_enabled">V</button></li>
+                            <li><button id="btn_w" class="btn_letter btn_enabled">W</button></li>
+                            <li><button id="btn_x" class="btn_letter btn_enabled">X</button></li>
+                            <li><button id="btn_y" class="btn_letter btn_enabled">Y</button></li>
+                            <li><button id="btn_z" class="btn_letter btn_enabled">Z</button></li>
+                        </ol>
+                    </div> <!-- end of div '.input_letters' -->
+
+                    <div id="input_buttons" class="centered">
+                        <button id="btn_start" class="btn_normal">Start New Game</button>
+                        <button id="btn_instructions" class="btn_normal">Instructions</button>
+                    </div> <!-- end of div '.input_buttons' -->
+                </div>
+            </section>
+        </div> <!-- end of div '#wrapper_main' -->
+    </main>
+
+    <footer>
+        <div id="wrapper_footer">
+            <div>
+                <p>Douglas Designs</p>
+                <p>Copyright &copy; 2022</p>
+            </div>
+            <div id="wrapper_socmed">
+                <ul>
+                    <li><a href="#"><img src="images/facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="images/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>                    
+                </ul>
+            </div> <!-- end of div '#wrapper_socmed' -->
+        </div> <!-- end of div '#wrapper_footer' -->
+    </footer>
+        
+    <section id="popup_instruc" class="popup">
+        <div class="popup_small">
+            <button class="btn_close_popup">&#x2715;</button>
+            <h3>Instructions</h3>
+            <p>Guess a letter for the mystery word.</p>				
+            <p>Be careful though - you have a limited number of incorrect guesses before the Lego dude falls apart!</p>
+        </div>
+    </section> <!-- end of section '#popup_instruc' -->
+
+    <section id="popup_won" class="popup">
+        <div class="popup_big">
+            <button class="btn_close_popup">&#x2715;</button>
+            <img src="images/you-won.jpg" alt="You won the game!">
+        </div>
+    </section> <!-- end of section '#popup_won' --> 
+
+    <section id="popup_lost" class="popup">
+        <div class="popup_big">
+            <button class="btn_close_popup">&#x2715;</button>
+            <img src="images/you-lost.jpg" alt="You lost the game!">
+       </div>
+    </section> <!-- end of section '#popup_lost' --> 
+</div>
+</body>
+
+</html>

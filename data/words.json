@@ -1,0 +1,482 @@
+[
+    {
+    "word": "Canada",
+    "hint1": "A country",
+    "hint2": "In the Americas",
+    "difficulty": 1
+    },
+    {
+    "word": "Haiti",
+    "hint1": "A country",
+    "hint2": "In the Americas",
+    "difficulty": 2
+    },
+    {
+    "word": "Cuba",
+    "hint1": "A country",
+    "hint2": "In the Americas",
+    "difficulty": 3
+    },
+    {
+    "word": "Peru",
+    "hint1": "A country",
+    "hint2": "In the Americas",
+    "difficulty": 2
+    },
+    {
+    "word": "Venezuela",
+    "hint1": "A country",
+    "hint2": "In the Americas",
+    "difficulty": 2
+    },
+    {
+    "word": "Norway",
+    "hint1": "A country",
+    "hint2": "In Europe",
+    "difficulty": 2
+    },
+    {
+    "word": "Belgium",
+    "hint1": "A country",
+    "hint2": "In Europe",
+    "difficulty": 2
+    },
+    {
+    "word": "Latvia",
+    "hint1": "A country",
+    "hint2": "In Europe",
+    "difficulty": 3
+    },
+    {
+    "word": "Czechia",
+    "hint1": "A country",
+    "hint2": "In Europe",
+    "difficulty": 4
+    },
+    {
+    "word": "Sweden",
+    "hint1": "A country",
+    "hint2": "In Europe",
+    "difficulty": 1
+    },
+    {
+    "word": "Chad",
+    "hint1": "A country",
+    "hint2": "In Africa",
+    "difficulty": 2
+    },
+    {
+    "word": "Ethiopia",
+    "hint1": "A country",
+    "hint2": "In Africa",
+    "difficulty": 3
+    },
+    {
+    "word": "Kenya",
+    "hint1": "A country",
+    "hint2": "In Africa",
+    "difficulty": 2
+    },
+    {
+    "word": "Uganda",
+    "hint1": "A country",
+    "hint2": "In Africa",
+    "difficulty": 2
+    },
+    {
+    "word": "Madagascar",
+    "hint1": "A country",
+    "hint2": "In Africa",
+    "difficulty": 1
+    },
+    {
+    "word": "Bangladesh",
+    "hint1": "A country",
+    "hint2": "In Asia",
+    "difficulty": 2
+    },
+    {
+    "word": "Japan",
+    "hint1": "A country",
+    "hint2": "In Asia",
+    "difficulty": 1
+    },
+    {
+    "word": "Kyrgyzstan",
+    "hint1": "A country",
+    "hint2": "In Asia",
+    "difficulty": 5
+    },
+    {
+    "word": "Philippines",
+    "hint1": "A country",
+    "hint2": "In Asia",
+    "difficulty": 2
+    },
+    {
+    "word": "Nepal",
+    "hint1": "A country",
+    "hint2": "In Asia",
+    "difficulty": 2
+    },
+    {
+    "word": "Ivory",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Whites",
+    "difficulty": 3
+    },
+    {
+    "word": "Cream",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Whites",
+    "difficulty": 2
+    },
+    {
+    "word": "Crimson",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Reds and Pinks",
+    "difficulty": 2
+    },
+    {
+    "word": "Fuchsia",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Reds and Pinks",
+    "difficulty": 4
+    },
+    {
+    "word": "Scarlet",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Reds and Pinks",
+    "difficulty": 1
+    },
+    {
+    "word": "Auburn",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Oranges and Browns",
+    "difficulty": 3
+    },
+    {
+    "word": "Coral",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Oranges and Browns",
+    "difficulty": 3
+    },
+    {
+    "word": "Chocolate",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Oranges and Browns",
+    "difficulty": 2
+    },
+    {
+    "word": "Gold",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Yellows",
+    "difficulty": 3
+    },
+    {
+    "word": "Lemon",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Yellows",
+    "difficulty": 2
+    },
+    {
+    "word": "Emerald",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Greens",
+    "difficulty": 1
+    },
+    {
+    "word": "Lime",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Greens",
+    "difficulty": 3
+    },
+    {
+    "word": "Olive",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Greens",
+    "difficulty": 3
+    },
+    {
+    "word": "Aquamarine",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Blues and Cyans",
+    "difficulty": 3
+    },
+    {
+    "word": "Navy",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Blues and Cyans",
+    "difficulty": 2
+    },
+    {
+    "word": "Sapphire",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Blues and Cyans",
+    "difficulty": 2
+    },
+    {
+    "word": "Turquoise",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Blues and Cyans",
+    "difficulty": 3
+    },
+    {
+    "word": "Amethyst",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Purples and Violets",
+    "difficulty": 4
+    },
+    {
+    "word": "Lilac",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Purples and Violets",
+    "difficulty": 2
+    },
+    {
+    "word": "Indigo",
+    "hint1": "A color",
+    "hint2": "In the color grouping: Purples and Violets",
+    "difficulty": 3
+    },
+    {
+    "word": "Cadillac",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: United States",
+    "difficulty": 2
+    },
+    {
+    "word": "Chrysler",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: United States",
+    "difficulty": 2
+    },
+    {
+    "word": "Dodge",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: United States",
+    "difficulty": 1
+    },
+    {
+    "word": "Jeep",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: United States",
+    "difficulty": 2
+    },
+    {
+    "word": "Tesla",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: United States",
+    "difficulty": 2
+    },
+    {
+    "word": "Suzuki",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Japan",
+    "difficulty": 3
+    },
+    {
+    "word": "Toyota",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Japan",
+    "difficulty": 1
+    },
+    {
+    "word": "Nissan",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Japan",
+    "difficulty": 1
+    },
+    {
+    "word": "Honda",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Japan",
+    "difficulty": 1
+    },
+    {
+    "word": "Mazda",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Japan",
+    "difficulty": 2
+    },
+    {
+    "word": "Volkswagen",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Germany",
+    "difficulty": 2
+    },
+    {
+    "word": "Porche",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Germany",
+    "difficulty": 2
+    },
+    {
+    "word": "Audi",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Germany",
+    "difficulty": 2
+    },
+    {
+    "word": "Hyundai",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: South Korea",
+    "difficulty": 2
+    },
+    {
+    "word": "Kia",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: South Korea",
+    "difficulty": 3
+    },
+    {
+    "word": "Volvo",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Sweden",
+    "difficulty": 3
+    },
+    {
+    "word": "Saab",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: Sweden",
+    "difficulty": 2
+    },
+    {
+    "word": "Bentley",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: England",
+    "difficulty": 3
+    },
+    {
+    "word": "Mini",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: England",
+    "difficulty": 2
+    },
+    {
+    "word": "Jaguar",
+    "hint1": "A car brand/make",
+    "hint2": "Country of origin: England",
+    "difficulty": 3
+    },
+    {
+    "word": "Canucks",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NHL",
+    "difficulty": 3
+    },
+    {
+    "word": "Islanders",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NHL",
+    "difficulty": 2
+    },
+    {
+    "word": "Avalanche",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NHL",
+    "difficulty": 3
+    },
+    {
+    "word": "Kraken",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NHL",
+    "difficulty": 4
+    },
+    {
+    "word": "Oilers",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NHL",
+    "difficulty": 3
+    },
+    {
+    "word": "Cowboys",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NFL",
+    "difficulty": 3
+    },
+    {
+    "word": "Packers",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NFL",
+    "difficulty": 2
+    },
+    {
+    "word": "Vikings",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NFL",
+    "difficulty": 3
+    },
+    {
+    "word": "Seahawks",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NFL",
+    "difficulty": 2
+    },
+    {
+    "word": "Broncos",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NFL",
+    "difficulty": 3
+    },
+    {
+    "word": "Celtics",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NBA",
+    "difficulty": 3
+    },
+    {
+    "word": "Grizzlies",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NBA",
+    "difficulty": 4
+    },
+    {
+    "word": "Magic",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NBA",
+    "difficulty": 3
+    },
+    {
+    "word": "Jazz",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NBA",
+    "difficulty": 4
+    },
+    {
+    "word": "Rockets",
+    "hint1": "A professional sports team name",
+    "hint2": "League: NBA",
+    "difficulty": 3
+    },
+    {
+    "word": "Diamondbacks",
+    "hint1": "A professional sports team name",
+    "hint2": "League: MLB",
+    "difficulty": 3
+    },
+    {
+    "word": "Dodgers",
+    "hint1": "A professional sports team name",
+    "hint2": "League: MLB",
+    "difficulty": 2
+    },
+    {
+    "word": "Giants",
+    "hint1": "A professional sports team name",
+    "hint2": "League: MLB",
+    "difficulty": 2
+    },
+    {
+    "word": "Yankees",
+    "hint1": "A professional sports team name",
+    "hint2": "League: MLB",
+    "difficulty": 2
+    },
+    {
+    "word": "Royals",
+    "hint1": "A professional sports team name",
+    "hint2": "League: MLB",
+    "difficulty": 2
+    }
+]

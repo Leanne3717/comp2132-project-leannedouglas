@@ -1,0 +1,335 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS page content settings for my Final Project (hangman) website.
+*/
+
+/* ----- HTML Element Tags ------------------------------------------------- */
+body {
+    margin: 0px;
+    background-color: $offwhite;
+	background-image: url(../images/beach.JPG);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+main {
+    background-color: transparent;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-headings;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: $offwhite;
+    margin-bottom: calc(10px * var(--scale-factor));
+}
+
+h2 {
+    color: $mediumnavy;
+    padding: calc(15px * var(--scale-factor));
+}
+
+h3, h4, h5, h6 {
+    color: $metal;
+}
+
+h3, h4 { margin-bottom: calc(10px * var(--scale-factor)); }
+h5, h6 { margin-bottom: calc(5px * var(--scale-factor)); }
+
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2.25rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.4rem;}
+h6 {font-size: 1.3rem;}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: calc(10px * var(--scale-factor));
+}
+
+img[src*="logo"] {
+    border-radius: 0px;
+    margin: 0px;
+    margin-right: calc(5px * var(--scale-text));
+}
+
+div.white_bg {
+    @include centered-rounded-box(0px, calc(20px * var(--scale-factor)), calc(10px * var(--scale-factor)), calc(15px * var(--scale-factor)), 5px, $gold, 800px);
+
+    div img {
+        max-width: 100%;
+        margin: auto;
+        border-radius: 0px;
+    }
+}
+
+div.gold_bg {
+    margin-bottom: calc(10px * var(--scale-factor));
+}
+
+p {
+    margin: 0px;
+    margin-bottom: calc(10px * var(--scale-factor));
+    line-height: 1.5;
+}
+
+section {
+    margin: 0px;
+    margin-top: calc(25px * var(--scale-factor));
+}
+
+ol {
+    margin-top: 0px;
+    margin-left: calc(15px * var(--scale-factor));
+    margin-bottom: 0px;
+    padding-left: calc(15px * var(--scale-factor));
+
+    li {
+        margin-bottom: calc(5px * var(--scale-factor));
+    }
+}
+
+ol#btn_letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(5px * var(--scale-text));
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ol#word_letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(5px * var(--scale-text));
+    list-style: none;
+    margin: calc(5px * var(--scale-text)) 0px;
+    padding: 0px;
+
+    li {
+        border-bottom: solid calc(3px * var(--scale-text)) $mediumnavy;
+        width: calc(22px * var(--scale-text));
+        height: calc(25px * var(--scale-text));
+        font-weight: bold;
+        font-size: calc(1.25rem * var(--scale-text));
+        text-align: center;
+    }
+
+    li.no_borders {
+        border: none;
+    }
+}
+
+button {
+    font-family: $font-form;
+    font-weight: bold;
+    font-size: calc(0.8rem * var(--scale-text));
+    text-align: center;
+    color: $mediumnavy;
+    height: calc(30px * var(--scale-text));
+    border-radius: calc(5px * var(--scale-text));
+    background-color: $gold;
+    cursor: pointer;
+}
+
+button.btn_letter {
+    font-family: $font-body;
+    font-weight: bold;
+    font-size: calc(1.0rem * var(--scale-text));
+    text-align: center;
+    height: calc(40px * var(--scale-text));
+    width: calc(30px * var(--scale-text));
+    border-radius: calc(5px * var(--scale-text));
+    cursor: pointer;
+}
+
+button.btn_normal {
+    width: calc(120px * var(--scale-text));
+    border: solid 2px $mediumnavy;
+}
+
+button.btn_normal:active, button.btn_normal:hover {
+    color: $gold;
+    border-color: $gold;
+    background-color: $mediumnavy;
+}
+
+/* ----- Classes ----------------------------------------------------------- */
+.gold_bg {
+    background-color: rgba(216, 198, 141, 0.7);
+}
+
+.white_bg {
+    background-color: $offwhite;
+}
+
+.btn_enabled {
+    color: $mediumnavy;
+    background-color: $gold;
+}
+
+.btn_enabled:active, .btn_enabled:hover {
+    color: $gold;
+    border-color: $gold;
+    background-color: $mediumnavy;
+}
+
+.btn_disabled, .btn_disabled:active, .btn_disabled:hover {
+    color: $metal;
+    background-color: $silver;
+    border-color: $metal;
+}
+
+/* Outline and highlight warnings */
+.warning {
+    font-weight: bold;
+    color: $offwhite;
+    background-color: $bad-color;
+    border: solid 5px $mediumnavy;
+    border-radius: calc(20px * var(--scale-text));
+    padding: calc(20px * var(--scale-text));
+}
+
+/* Add '!Warning' preamble */
+div.warning > h2::before, div.warning > h3::before {
+    content:"\2755 Warning: ";
+}
+
+div.warning > h2, div.warning > h3 {
+    color: $offwhite;
+}
+
+.warning:not(.warning-no-script) {
+    margin-bottom: 1em;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    gap: calc(10px * var(--scale-text));
+}
+
+.popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;    
+    width: 100vw;
+    height: 100vh;    
+	/* Ensure it is overtop all other page elements */
+	z-index: 1000;
+	background-color: rgba(12, 33, 54, 0.7);
+    margin: 0px;
+    /* The popup should initially be transparent */ 
+    opacity: 0;
+
+    div {
+        color: $offwhite;
+        background-color: $mediumnavy;
+        min-width: calc(280px * var(--scale-factor));
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        h3 {
+            color: $gold;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        p:first-of-type {
+            margin-bottom: calc(10px * var(--scale-text));
+        }
+    }
+}
+
+div.popup_small {
+    @include centered-rounded-box(0px, 0px, calc(20px * var(--scale-text)), calc(20px * var(--scale-text)), 2px, $gold, 360px);
+}
+
+div.popup_big {
+    @include centered-rounded-box(0px, 0px, 0px, calc(20px * var(--scale-text)), 0px, $gold, $wrapper-width);
+    background-color: transparent;
+}
+
+.popup .btn_close_popup {
+	background-color: $offwhite;
+	color: $mediumnavy;
+	border-radius: 50%;
+	font-weight: bold;
+    border: solid 2px $gold;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+}
+
+.popup .btn_close_popup:hover, .popup .btn_close_popup:focus, .popup .btn_close_popup:active {
+	background-color: $gold;
+    border: solid 2px $offwhite;
+	transform: scale(1.1);
+}
+
+
+/* ----- IDs --------------------------------------------------------------- */
+#input_letters {
+    max-width: calc(480px * var(--scale-text));
+    margin: auto;
+}
+
+#input_buttons {
+    margin-top: calc(10px * var(--scale-text));
+}
+
+#game_stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(5px * var(--scale-text));
+    color: $offwhite;
+    background-color: $mediumnavy;
+    @include centered-rounded-box(0px, calc(10px * var(--scale-text)), calc(5px * var(--scale-text)), calc(5px * var(--scale-text)), 2px, $gold, calc(450px * var(--scale-text)));
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#difficulty, #guesses {
+    margin: 0px;
+}
+
+#game_title {
+    margin: 0px auto calc(20px * var(--scale-factor)) auto;
+    max-width: 800px;
+}
+
+#wrapper_main {
+    max-width: $wrapper-width;
+    margin: auto;
+    padding: calc(20px * var(--scale-factor));
+    padding-top: 0px;
+    background-color: transparent;
+}
+
+#wrapper_body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}

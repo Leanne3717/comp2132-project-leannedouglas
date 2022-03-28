@@ -1,0 +1,15 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS mixin for my Final Project (hangman) website.
+*/
+
+// Creates a centered box with rounded corners and a specified maximum width
+@mixin centered-rounded-box($top-margin, $bottom-margin, $padding, $corner-radius, $border-weight, $border-color, $max-width) {
+    margin: $top-margin auto $bottom-margin auto;
+    padding: $padding;
+    border-radius: $corner-radius;
+    border: $border-weight solid $border-color;
+    max-width: $max-width;
+}

@@ -1,0 +1,17 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS box sizing reset and html settings for my Final Project (hangman) website.
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: calc(0.9rem * var(--scale-text));
+  font-family: $font-body;
+  color: $mediumnavy;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

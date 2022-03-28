@@ -1,0 +1,21 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS file imports for my Final Project (hangman) website.
+*/
+
+@charset "utf-8";
+
+@import "variables.scss"; 
+@import "mixins.scss";
+// @import "normalize.scss";
+@import "box_reset.scss";
+
+//import resets
+@import "header.scss";
+@import "page_content.scss";
+@import "footer.scss";
+
+//import wide screen media query styles
+@import "media_queries.scss";

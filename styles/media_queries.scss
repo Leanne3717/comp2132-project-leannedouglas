@@ -1,0 +1,144 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the media queries for the responsive design
+            of my Final Project (hangman) website.
+*/
+
+@media screen and (min-width: 400px) {
+    div.popup_big {
+        min-width: calc(360px * var(--scale-factor));
+    }
+
+    #game_stats {
+        gap: calc(25px * var(--scale-text));
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+
+@media screen and (min-width: 450px) {
+    div.popup_big {
+        min-width: calc(410px * var(--scale-factor));
+    }
+
+    ol#word_letters li {
+        width: calc(30px * var(--scale-text));
+        height: calc(33px * var(--scale-text));
+        font-size: calc(1.5rem * var(--scale-text));
+    }
+}
+
+
+@media screen and (min-width: 500px) {
+    :root {
+        /* Global Scale Factors */
+        --scale-factor: 1.2;
+        --scale-text: 1.05;
+    }
+
+    div.popup_big {
+        min-width: calc(375px * var(--scale-factor));
+    }
+
+    // Display the main navigation menu bar
+    nav {
+        display: block;
+
+        ul {
+            display: flex;
+
+            li {
+                flex: 1;
+                border-right: 1px solid $offwhite;
+                border-bottom: none;
+            }
+
+            li:last-child {
+                border-right: none;
+            }
+        }
+    }
+   
+    footer p {
+        line-height: 200%;
+    }
+
+    .small_menu, .small_menu:link, .small_menu:visited, .small_menu:hover,
+     .small_menu:focus, .small_menu:active {
+      display: none;
+    }
+
+    #wrapper_h1 {
+        margin: 50px;
+        margin-bottom: calc(20px * var(--scale-factor));
+        width: 350px;
+    }
+}
+
+
+@media screen and (min-width: 650px) {
+    :root {
+        /* Global Scale Factors */
+        --scale-factor: 1.4;
+        --scale-text:1.1;
+    }
+
+    div.popup_big {
+        min-width: calc(425px * var(--scale-factor));
+    }
+}
+
+@media screen and (min-width: 800px) {
+    :root {
+        /* Global Scale Factors */
+        --scale-factor: 1.6;
+        --scale-text: 1.15;
+    }
+    
+    header {
+        position: relative;
+    }
+
+    div.popup_big {
+        min-width: calc(460px * var(--scale-factor));
+    }
+}
+
+
+@media print {
+    /* Make sure page headings do not appear at the bottom of pages. */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        color: black;
+    }
+
+    /* Display fully qualified links when printing. */
+    a[href^="http"]::after {
+        content: " (URL: " attr(href) ") ";
+    }
+
+    body {
+        color: black;
+        background: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    nav, footer {
+        display: none;
+    }
+
+    .small_menu, .small_menu:link, .small_menu:visited, .small_menu:hover,
+     .small_menu:focus, .small_menu:active {
+        display: none;
+    }
+
+    .bad_result, .good_result {
+        border-color: black;
+    }
+}

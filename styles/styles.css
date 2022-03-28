@@ -1,0 +1,749 @@
+@charset "UTF-8";
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS file imports for my Final Project (hangman) website.
+*/
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the font-face declarations and SCSS variables for my Final
+            Project (hangman) website.
+*/
+/* ----------------------------------------------------------------------------------------- */
+/* @font-face declarations */
+/* ----------------------------------------------------------------------------------------- */
+/* Logo/Branding */
+@font-face {
+  font-family: "Cavolini";
+  src: url("../fonts/Cavolini.woff2") format("woff2"), url("../fonts/Cavolini.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Headings */
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Heavy.woff2") format("woff2"), url("../fonts/FiraSans-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Nav and Form Text */
+@font-face {
+  font-family: "GothamNarrow";
+  src: url("../fonts/GothamNarrow-Book.woff2") format("woff2"), url("../fonts/GothamNarrow-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Main Text */
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* SASS Variables */
+/* ----------------------------------------------------------------------------------------- */
+/* Color Variables */
+/* red means there is a problem */
+/* green means the result is good/found */
+/* Width Variables */
+/* Font-Stacks    */
+/* Global Scale Factors for Spacing and Text-Related Items */
+:root {
+  --scale-factor: 1.0;
+  --scale-text: 1.0;
+}
+
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS mixin for my Final Project (hangman) website.
+*/
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS box sizing reset and html settings for my Final Project (hangman) website.
+*/
+html {
+  box-sizing: border-box;
+  font-size: calc(0.9rem * var(--scale-text));
+  font-family: "Gotham", "sans-serif";
+  color: #163a5f;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS header settings for my Final Project (hangman) website.
+*/
+nav {
+  display: none;
+  max-width: 1024px;
+  margin: 0px auto;
+  padding: 0px;
+  clear: both;
+}
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+nav ul li {
+  margin-bottom: 0px;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited {
+  display: block;
+  line-height: calc(20px * var(--scale-factor));
+  text-align: center;
+  text-decoration: none;
+  color: #f0f2ef;
+  font-family: "GothamNarrow", "sans-serif";
+  padding: calc(5px * var(--scale-factor));
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background-color: #f0f2ef;
+  color: #163a5f;
+}
+
+nav ul li a:active {
+  color: #d8c68d;
+  background-color: inherit;
+}
+
+/* Position the navbar container inside the image */
+#wrapper_header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin: 0px;
+  width: 100%;
+  background-image: linear-gradient(-90deg, #0c2136, #163a5f);
+  z-index: 100;
+}
+
+/* The company logo and name */
+#wrapper_brand {
+  max-width: 1024px;
+  margin: auto;
+  padding: calc(10px * var(--scale-factor)) calc(15px * var(--scale-factor));
+  border-bottom: solid 2px #f0f2ef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  display: block;
+  padding-right: 64px;
+}
+
+/* The subheader that contains the H1 tag */
+#wrapper_subhead {
+  max-width: 1024px;
+  margin: auto;
+}
+
+#wrapper_h1 {
+  position: static;
+  width: 100%;
+  margin-bottom: calc(10px * var(--scale-factor));
+  padding: calc(15px * var(--scale-factor));
+  background-image: none;
+  background-color: rgba(12, 33, 54, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.small_menu, .small_menu:link, .small_menu:visited, .small_menu:hover,
+.small_menu:focus, .small_menu:active {
+  display: block;
+  background-color: transparent;
+  text-decoration: none;
+  margin: 0px;
+  font-family: "Cavolini", "sans-serif";
+  font-size: calc(2rem * var(--scale-text));
+  color: #f0f2ef;
+  align-self: center;
+  outline: none;
+}
+
+.h1_subtext {
+  font-family: "Gotham", "sans-serif";
+  color: #f0f2ef;
+  font-size: 1rem;
+  margin-top: calc(10px * var(--scale-factor));
+  margin-bottom: 0px;
+}
+
+/* Used to toggle the nav when the Menu button is clicked */
+.show {
+  display: block;
+}
+
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS page content settings for my Final Project (hangman) website.
+*/
+/* ----- HTML Element Tags ------------------------------------------------- */
+body {
+  margin: 0px;
+  background-color: #f0f2ef;
+  background-image: url(../images/beach.JPG);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+main {
+  background-color: transparent;
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans", "sans-serif";
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  color: #f0f2ef;
+  margin-bottom: calc(10px * var(--scale-factor));
+}
+
+h2 {
+  color: #163a5f;
+  padding: calc(15px * var(--scale-factor));
+}
+
+h3, h4, h5, h6 {
+  color: #87919e;
+}
+
+h3, h4 {
+  margin-bottom: calc(10px * var(--scale-factor));
+}
+
+h5, h6 {
+  margin-bottom: calc(5px * var(--scale-factor));
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: calc(10px * var(--scale-factor));
+}
+
+img[src*=logo] {
+  border-radius: 0px;
+  margin: 0px;
+  margin-right: calc(5px * var(--scale-text));
+}
+
+div.white_bg {
+  margin: 0px auto calc(20px * var(--scale-factor)) auto;
+  padding: calc(10px * var(--scale-factor));
+  border-radius: calc(15px * var(--scale-factor));
+  border: 5px solid #d8c68d;
+  max-width: 800px;
+}
+div.white_bg div img {
+  max-width: 100%;
+  margin: auto;
+  border-radius: 0px;
+}
+
+div.gold_bg {
+  margin-bottom: calc(10px * var(--scale-factor));
+}
+
+p {
+  margin: 0px;
+  margin-bottom: calc(10px * var(--scale-factor));
+  line-height: 1.5;
+}
+
+section {
+  margin: 0px;
+  margin-top: calc(25px * var(--scale-factor));
+}
+
+ol {
+  margin-top: 0px;
+  margin-left: calc(15px * var(--scale-factor));
+  margin-bottom: 0px;
+  padding-left: calc(15px * var(--scale-factor));
+}
+ol li {
+  margin-bottom: calc(5px * var(--scale-factor));
+}
+
+ol#btn_letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(5px * var(--scale-text));
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ol#word_letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(5px * var(--scale-text));
+  list-style: none;
+  margin: calc(5px * var(--scale-text)) 0px;
+  padding: 0px;
+}
+ol#word_letters li {
+  border-bottom: solid calc(3px * var(--scale-text)) #163a5f;
+  width: calc(22px * var(--scale-text));
+  height: calc(25px * var(--scale-text));
+  font-weight: bold;
+  font-size: calc(1.25rem * var(--scale-text));
+  text-align: center;
+}
+ol#word_letters li.no_borders {
+  border: none;
+}
+
+button {
+  font-family: "GothamNarrow", "sans-serif";
+  font-weight: bold;
+  font-size: calc(0.8rem * var(--scale-text));
+  text-align: center;
+  color: #163a5f;
+  height: calc(30px * var(--scale-text));
+  border-radius: calc(5px * var(--scale-text));
+  background-color: #d8c68d;
+  cursor: pointer;
+}
+
+button.btn_letter {
+  font-family: "Gotham", "sans-serif";
+  font-weight: bold;
+  font-size: calc(1rem * var(--scale-text));
+  text-align: center;
+  height: calc(40px * var(--scale-text));
+  width: calc(30px * var(--scale-text));
+  border-radius: calc(5px * var(--scale-text));
+  cursor: pointer;
+}
+
+button.btn_normal {
+  width: calc(120px * var(--scale-text));
+  border: solid 2px #163a5f;
+}
+
+button.btn_normal:active, button.btn_normal:hover {
+  color: #d8c68d;
+  border-color: #d8c68d;
+  background-color: #163a5f;
+}
+
+/* ----- Classes ----------------------------------------------------------- */
+.gold_bg {
+  background-color: rgba(216, 198, 141, 0.7);
+}
+
+.white_bg {
+  background-color: #f0f2ef;
+}
+
+.btn_enabled {
+  color: #163a5f;
+  background-color: #d8c68d;
+}
+
+.btn_enabled:active, .btn_enabled:hover {
+  color: #d8c68d;
+  border-color: #d8c68d;
+  background-color: #163a5f;
+}
+
+.btn_disabled, .btn_disabled:active, .btn_disabled:hover {
+  color: #87919e;
+  background-color: #b0b7bf;
+  border-color: #87919e;
+}
+
+/* Outline and highlight warnings */
+.warning {
+  font-weight: bold;
+  color: #f0f2ef;
+  background-color: #d10707;
+  border: solid 5px #163a5f;
+  border-radius: calc(20px * var(--scale-text));
+  padding: calc(20px * var(--scale-text));
+}
+
+/* Add '!Warning' preamble */
+div.warning > h2::before, div.warning > h3::before {
+  content: "❕Warning: ";
+}
+
+div.warning > h2, div.warning > h3 {
+  color: #f0f2ef;
+}
+
+.warning:not(.warning-no-script) {
+  margin-bottom: 1em;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  gap: calc(10px * var(--scale-text));
+}
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  /* Ensure it is overtop all other page elements */
+  z-index: 1000;
+  background-color: rgba(12, 33, 54, 0.7);
+  margin: 0px;
+  /* The popup should initially be transparent */
+  opacity: 0;
+}
+.popup div {
+  color: #f0f2ef;
+  background-color: #163a5f;
+  min-width: calc(280px * var(--scale-factor));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup div h3 {
+  color: #d8c68d;
+}
+.popup div p {
+  margin: 0px;
+}
+.popup div p:first-of-type {
+  margin-bottom: calc(10px * var(--scale-text));
+}
+
+div.popup_small {
+  margin: 0px auto 0px auto;
+  padding: calc(20px * var(--scale-text));
+  border-radius: calc(20px * var(--scale-text));
+  border: 2px solid #d8c68d;
+  max-width: 360px;
+}
+
+div.popup_big {
+  margin: 0px auto 0px auto;
+  padding: 0px;
+  border-radius: calc(20px * var(--scale-text));
+  border: 0px solid #d8c68d;
+  max-width: 1024px;
+  background-color: transparent;
+}
+
+.popup .btn_close_popup {
+  background-color: #f0f2ef;
+  color: #163a5f;
+  border-radius: 50%;
+  font-weight: bold;
+  border: solid 2px #d8c68d;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+}
+
+.popup .btn_close_popup:hover, .popup .btn_close_popup:focus, .popup .btn_close_popup:active {
+  background-color: #d8c68d;
+  border: solid 2px #f0f2ef;
+  transform: scale(1.1);
+}
+
+/* ----- IDs --------------------------------------------------------------- */
+#input_letters {
+  max-width: calc(480px * var(--scale-text));
+  margin: auto;
+}
+
+#input_buttons {
+  margin-top: calc(10px * var(--scale-text));
+}
+
+#game_stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(5px * var(--scale-text));
+  color: #f0f2ef;
+  background-color: #163a5f;
+  margin: 0px auto calc(10px * var(--scale-text)) auto;
+  padding: calc(5px * var(--scale-text));
+  border-radius: calc(5px * var(--scale-text));
+  border: 2px solid #d8c68d;
+  max-width: calc(450px * var(--scale-text));
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#difficulty, #guesses {
+  margin: 0px;
+}
+
+#game_title {
+  margin: 0px auto calc(20px * var(--scale-factor)) auto;
+  max-width: 800px;
+}
+
+#wrapper_main {
+  max-width: 1024px;
+  margin: auto;
+  padding: calc(20px * var(--scale-factor));
+  padding-top: 0px;
+  background-color: transparent;
+}
+
+#wrapper_body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS footer settings for my Final Project (hangman) website.
+*/
+footer {
+  padding: 16px;
+  margin: 0px;
+  background-image: linear-gradient(-90deg, #0c2136, #163a5f);
+}
+footer p {
+  color: #f0f2ef;
+  font-size: 0.8rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+footer img {
+  width: calc(30px * var(--scale-factor));
+  margin: calc(8px * var(--scale-factor)) calc(6px * var(--scale-factor)) calc(2px * var(--scale-factor)) calc(6px * var(--scale-factor));
+}
+
+footer a, footer a:link, footer a:visited {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+  background-color: #f0f2ef;
+}
+
+footer a:active {
+  background-color: inherit;
+}
+
+#wrapper_footer {
+  max-width: 1024px;
+  margin: auto;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wrapper_socmed {
+  align-self: center;
+}
+
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the media queries for the responsive design
+            of my Final Project (hangman) website.
+*/
+@media screen and (min-width: 400px) {
+  div.popup_big {
+    min-width: calc(360px * var(--scale-factor));
+  }
+
+  #game_stats {
+    gap: calc(25px * var(--scale-text));
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 450px) {
+  div.popup_big {
+    min-width: calc(410px * var(--scale-factor));
+  }
+
+  ol#word_letters li {
+    width: calc(30px * var(--scale-text));
+    height: calc(33px * var(--scale-text));
+    font-size: calc(1.5rem * var(--scale-text));
+  }
+}
+@media screen and (min-width: 500px) {
+  :root {
+    /* Global Scale Factors */
+    --scale-factor: 1.2;
+    --scale-text: 1.05;
+  }
+
+  div.popup_big {
+    min-width: calc(375px * var(--scale-factor));
+  }
+
+  nav {
+    display: block;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    flex: 1;
+    border-right: 1px solid #f0f2ef;
+    border-bottom: none;
+  }
+  nav ul li:last-child {
+    border-right: none;
+  }
+
+  footer p {
+    line-height: 200%;
+  }
+
+  .small_menu, .small_menu:link, .small_menu:visited, .small_menu:hover,
+.small_menu:focus, .small_menu:active {
+    display: none;
+  }
+
+  #wrapper_h1 {
+    margin: 50px;
+    margin-bottom: calc(20px * var(--scale-factor));
+    width: 350px;
+  }
+}
+@media screen and (min-width: 650px) {
+  :root {
+    /* Global Scale Factors */
+    --scale-factor: 1.4;
+    --scale-text:1.1;
+  }
+
+  div.popup_big {
+    min-width: calc(425px * var(--scale-factor));
+  }
+}
+@media screen and (min-width: 800px) {
+  :root {
+    /* Global Scale Factors */
+    --scale-factor: 1.6;
+    --scale-text: 1.15;
+  }
+
+  header {
+    position: relative;
+  }
+
+  div.popup_big {
+    min-width: calc(460px * var(--scale-factor));
+  }
+}
+@media print {
+  /* Make sure page headings do not appear at the bottom of pages. */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    color: black;
+  }
+
+  /* Display fully qualified links when printing. */
+  a[href^=http]::after {
+    content: " (URL: " attr(href) ") ";
+  }
+
+  body {
+    color: black;
+    background: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  nav, footer {
+    display: none;
+  }
+
+  .small_menu, .small_menu:link, .small_menu:visited, .small_menu:hover,
+.small_menu:focus, .small_menu:active {
+    display: none;
+  }
+
+  .bad_result, .good_result {
+    border-color: black;
+  }
+}

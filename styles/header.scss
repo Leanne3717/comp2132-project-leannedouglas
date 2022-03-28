@@ -1,0 +1,115 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS header settings for my Final Project (hangman) website.
+*/
+
+
+nav {
+    display: none;
+    max-width: $wrapper-width;
+    margin: 0px auto;
+    padding: 0px;
+    clear: both;
+    
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    
+        li {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited {
+    display: block;
+    line-height: calc(20px * var(--scale-factor));
+    text-align: center;
+    text-decoration: none;
+    color: $offwhite;
+    font-family: $font-nav;
+    padding: calc(5px * var(--scale-factor));
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: $offwhite;
+    color: $mediumnavy;
+}
+
+nav ul li a:active {
+    color: $gold;
+    background-color: inherit;
+}
+
+/* Position the navbar container inside the image */
+#wrapper_header {
+position: sticky;
+top: 0;
+margin: 0px;
+width: 100%;
+background-image: linear-gradient(-90deg, #0c2136, #163a5f);
+z-index: 100;
+}
+
+/* The company logo and name */
+#wrapper_brand {
+    max-width: $wrapper-width;
+    margin: auto;
+    padding: calc(10px * var(--scale-factor)) calc(15px * var(--scale-factor));
+    border-bottom: solid 2px $offwhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: block;
+    padding-right: 64px;
+}
+
+/* The subheader that contains the H1 tag */
+#wrapper_subhead {
+    max-width: $wrapper-width;
+    margin: auto;
+}
+
+#wrapper_h1 {
+    position: static;
+    width: 100%;
+    margin-bottom: calc(10px * var(--scale-factor));
+    padding: calc(15px * var(--scale-factor));
+    background-image: none;
+    background-color: rgba(12, 33, 54, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small_menu, .small_menu:link, .small_menu:visited, .small_menu:hover,
+    .small_menu:focus, .small_menu:active {
+    display: block;
+    background-color: transparent;
+    text-decoration: none;
+    margin: 0px;
+    font-family: $font-logo;
+    font-size: calc(2.0rem * var(--scale-text));
+    color: $offwhite;
+    align-self: center;
+    outline: none;
+}
+
+.h1_subtext {
+    font-family: $font-body;
+    color: $offwhite;
+    font-size: 1.0rem;
+    margin-top: calc(10px * var(--scale-factor));
+    margin-bottom: 0px;
+}
+
+/* Used to toggle the nav when the Menu button is clicked */
+.show {
+    display: block;
+}

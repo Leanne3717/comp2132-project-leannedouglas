@@ -1,0 +1,63 @@
+/*
+	Author: Leanne Douglas
+	Date:	March 27, 2022
+    Notes:	COMP2132 - Final Project
+			This page provides the SCSS footer settings for my Final Project (hangman) website.
+*/
+
+
+footer {
+    padding: 16px;
+    margin: 0px;
+    background-image: linear-gradient(-90deg, #0c2136, #163a5f);
+
+    p {
+        color: $offwhite;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 1.5;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+    }
+
+    img {
+        width: calc(30px * var(--scale-factor));
+        margin: calc(8px * var(--scale-factor))
+                calc(6px * var(--scale-factor))
+                calc(2px * var(--scale-factor))
+                calc(6px * var(--scale-factor));  
+    }
+}
+
+footer a, footer a:link, footer a:visited {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    background-color: $offwhite;
+}
+
+footer a:active {
+    background-color: inherit;
+}
+
+#wrapper_footer {
+    max-width: $wrapper-width;
+    margin: auto;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#wrapper_socmed {
+    align-self: center;
+}
